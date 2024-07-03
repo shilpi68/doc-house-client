@@ -1,4 +1,4 @@
-
+import logo from "../../../assets/docHouseIcons.jpeg"
 
 const NavBar = () => {
 
@@ -7,7 +7,7 @@ const NavBar = () => {
     </>
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-lg">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,7 +32,14 @@ const NavBar = () => {
                            
                         </ul>
                     </div>
-                    <h1 className="font-bold text-2xl"><span className="text-orange-300">Doc</span> House</h1>
+                    <div className="flex">
+                        <div>
+                            <img className="w-20 rounded-3xl h-20 mr-4" src={logo} alt="" />
+                        </div>
+                        <div>
+                            <h1 className="font-bold text-2xl"><span className="text-orange-300">Doc</span> House</h1>
+                            </div>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
