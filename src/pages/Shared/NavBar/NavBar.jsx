@@ -1,13 +1,17 @@
+import { Link } from "react-router-dom";
 import logo from "../../../assets/docHouseIcons.jpeg"
 
 const NavBar = () => {
 
     const navOptions = <>
-     <li><a>Item 1</a></li>
+     <li><Link to="/">Home</Link></li>
+     <li><Link to="/about">About</Link></li>
+     <li><Link to="/appoinment">Appoinment</Link></li>
+     <li><Link to="/login">Login</Link></li>
     </>
     return (
         <>
-            <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-lg">
+            <div className="navbar fixed z-10 bg-opacity-30 bg-orange-100 text-white max-w-screen-lg">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +30,7 @@ const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-orange-600 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                            
                             {navOptions}
                            

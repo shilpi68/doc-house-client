@@ -1,8 +1,14 @@
 import servicesimg from "../../../assets/doctorFinger.png"
+import SectionTitle from "../../../comoponent/SectionTitle/SectionTitle";
 
 const Services = () => {
     return (
-        <div className="flex mt-10 ">
+        <section>
+            <SectionTitle
+            heading={"EveryDay - 10am to 8pm"}
+            subHeading={"Our Service"}
+            ></SectionTitle>
+            <div className="flex mt-10 ">
             <div className="flex-1">
                 <img src={servicesimg} alt="" />
             </div>
@@ -30,6 +36,7 @@ const Services = () => {
             </div>
 
         </div>
+        </section>
     );
 };
 
