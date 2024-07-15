@@ -1,17 +1,43 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/docHouseIcons.jpeg"
-
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProviders";
+import { FaHouseMedicalFlag } from "react-icons/fa6";
+import useCart from "../../../hooks/useCart";
 const NavBar = () => {
 
+    const { user, logOut } = useContext(AuthContext)
+     const [cart] =useCart();
+    const hanldeLogOut = () => {
+        logOut()
+            .then(() => { })
+            .then(error => console.log(error))
+    }
     const navOptions = <>
-     <li><Link to="/">Home</Link></li>
-     <li><Link to="/about">About</Link></li>
-     <li><Link to="/appoinment">Appoinment</Link></li>
-     <li><Link to="/login">Login</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about/Dr. John Smith">About</Link></li>
+        <li><Link to="/appoinment">Appoinment</Link></li>
+        <li><Link to="/secret">Secret</Link></li>
+        <li><Link to='/dashboard/cart'>
+            <button className="btn">
+               <FaHouseMedicalFlag className="text-2xl"></FaHouseMedicalFlag>
+                <div className="badge badge-secondary">+{cart.length}</div>
+            </button>
+        </Link></li>
+        {
+            user ?
+                <>
+                    <p>{user?.displayName}</p>
+                    <button onClick={hanldeLogOut} className="btn btn-accent">Logout</button>
+                </> :
+                <>
+                    <li><Link to="/login">Login</Link></li>
+                </>
+        }
     </>
     return (
         <>
-            <div className="navbar fixed z-10 bg-opacity-30 bg-orange-100 text-white max-w-screen-lg">
+            <div className="navbar fixed z-10 bg-opacity-30 bg-orange-950 text-white max-w-screen-lg">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,9 +57,9 @@ const NavBar = () => {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-orange-600 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                           
+
                             {navOptions}
-                           
+
                         </ul>
                     </div>
                     <div className="flex">
@@ -42,7 +68,7 @@ const NavBar = () => {
                         </div>
                         <div>
                             <h1 className="font-bold text-2xl"><span className="text-orange-300">Doc</span> House</h1>
-                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">

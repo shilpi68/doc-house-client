@@ -1,34 +1,28 @@
 [
     {
-      "id": "1",
       "name": "John Doe",
       "details": "The house was clean and well-maintained. The location is perfect, close to all amenities. The host was very accommodating.",
       "rating": 5,
       "designer": "Alice Green"
     },
     {
-      "id": "2",
       "name": "Jane Smith",
       "details": "Lovely house with a beautiful garden. The interior was cozy and comfortable. Had a minor issue with the plumbing but it was quickly resolved.",
       "rating": 4,
       "designer": "Bob Blue"
     },
-    {
-      "id": "3",
-      "name": "Emily Johnson",
+    { "name": "Emily Johnson",
       "details": "The house met all our expectations. Spacious, modern, and in a quiet neighborhood. Would definitely recommend.",
       "rating": 5,
       "designer": "Charlie Red"
     },
     {
-      "id": "4",
       "name": "Michael Brown",
       "details": "Nice place but a bit smaller than expected. Overall, it was a pleasant stay.",
       "rating": 3,
       "designer": "Diana Yellow"
     },
     {
-      "id": "5",
       "name": "Sarah Davis",
       "details": "Had a wonderful time. The house was exactly as described. Great value for the price.",
       "rating": 5,

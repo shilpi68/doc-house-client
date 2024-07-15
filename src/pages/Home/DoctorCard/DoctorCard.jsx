@@ -1,16 +1,11 @@
-import { useEffect, useState } from "react";
 import SectionTitle from "../../../comoponent/SectionTitle/SectionTitle";
+import useCard from "../../../hooks/useCard";
 import Card from "./Card";
 
 
 const DoctorCard = () => {
-    const [card, SetCard] = useState([])
-    useEffect(() =>{
-        fetch("card.json")
-        .then(res => res.json())
-        .then(data => SetCard(data))
-        console.log(card.length)
-    },[card.length])
+    const [card] = useCard()
+    
     return (
         <section>
             <SectionTitle

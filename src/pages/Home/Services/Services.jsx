@@ -12,7 +12,7 @@ const Services = () => {
             <div className="flex-1">
                 <img src={servicesimg} alt="" />
             </div>
-            <div className="flex-1 ml-12">
+            <div className="flex-1 ml-12 ">
                 <h2 className="text-2xl font-semibold">Electro  Gastrology Therapy</h2>
                 <p className="text-xl font-thin">Sed ut perspiciatis unde omnis
                     iste natus error sit voluptatem
